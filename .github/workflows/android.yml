@@ -25,7 +25,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleRelease
     - name: create zip
-      run: zip -r release ./*
+      run: zip -r release ./app/build/outputs/apk/release/*
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
