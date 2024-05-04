@@ -1,7 +1,7 @@
 @file:OptIn(ExperimentalSerializationApi::class)
 
 package moe.ore.txhook.app
-
+import android.net.Uri
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -114,7 +114,7 @@ class MainActivity : EasyActivity() {
         toolbar.setOnClickListener {
             val intent = Intent()
             intent.setAction("android.intent.action.VIEW")
-            #val content_url = Url.parse("https://github.com/Suzhelan/TXHook")
+            val content_url = Uri.parse("https://github.com/Suzhelan/TXHook")
             intent.setData(content_url)
             startActivity(intent)
         }
